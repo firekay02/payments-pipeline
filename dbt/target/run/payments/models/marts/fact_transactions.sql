@@ -1,32 +1,18 @@
 
       
-  
+        
+        
+        delete from "payments"."analytics"."fact_transactions" as DBT_INTERNAL_DEST
+        where (transaction_id) in (
+            select distinct transaction_id
+            from "fact_transactions__dbt_tmp145045394292" as DBT_INTERNAL_SOURCE
+        );
+
     
 
-  create  table "payments"."analytics"."fact_transactions"
-  
-  
-    as
-  
-  (
-    -- Incremental: after the first build, only rows loaded since the last run are processed.
--- unique_key means a re-processed transaction replaces its old row instead of duplicating.
-
-
-select
-    t.transaction_id,
-    md5(t.customer_id)                            as customer_key,
-    md5(t.merchant_id)                            as merchant_key,
-    to_char(t.transaction_date, 'YYYYMMDD')::int  as date_key,
-    md5(t.channel)                                as channel_key,
-    t.amount,
-    t.fee,
-    t.status,
-    t.created_at,
-    t.loaded_at
-from "payments"."analytics"."stg_transactions" t
-
-
-  );
-  
+    insert into "payments"."analytics"."fact_transactions" ("transaction_id", "customer_key", "merchant_key", "date_key", "channel_key", "amount", "fee", "status", "created_at", "loaded_at")
+    (
+        select "transaction_id", "customer_key", "merchant_key", "date_key", "channel_key", "amount", "fee", "status", "created_at", "loaded_at"
+        from "fact_transactions__dbt_tmp145045394292"
+    )
   

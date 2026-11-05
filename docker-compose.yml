@@ -19,6 +19,21 @@ services:
     depends_on:
       - postgres
 
+  airflow:
+    build: ./airflow
+    command: standalone
+    env_file: .env
+    environment:
+      POSTGRES_HOST: postgres
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - .:/opt/airflow/project
+    depends_on:
+      - postgres
+
 volumes:
   pgdata:
   metabase-data:

@@ -15,3 +15,6 @@ select
     t.loaded_at
 from "payments"."analytics"."stg_transactions" t
 
+
+-- loaded_at (not created_at) so late-arriving transactions are still picked up
+where t.loaded_at > (select coalesce(max(loaded_at), '1900-01-01') from "payments"."analytics"."fact_transactions")

@@ -18,7 +18,7 @@ tests their quality, and serves business metrics on a dashboard.
 | Ingestion | Python | ✅ v1 |
 | Warehouse | PostgreSQL (Docker) | ✅ v2 |
 | Transformations & tests | dbt | ✅ v4 |
-| Orchestration | Airflow | ⬜ v5 |
+| Orchestration | Airflow | ✅ v5 |
 | Dashboard | Metabase | ✅ v6 |
 
 ## Dashboard
@@ -56,7 +56,7 @@ python ingestion/load_to_postgres.py
 - [x] v2 Postgres load with upserts
 - [ ] v3 Docker for the whole pipeline + raw files in S3/GCS
 - [x ] v4 dbt staging → marts + tests
-- [ ] v5 Airflow daily DAG
+- [x ] v5 Airflow daily DAG
 - [ ] v6 Dashboard + alerts
 
 ## What I would improve next
