@@ -1,0 +1,1834 @@
+[0m11:12:41.299428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8968FAA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8944E8F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D899303890>]}
+
+
+============================== 11:12:41.319576 | 6c8db1c8-6584-451c-8f9b-82aee5cc9e2e ==============================
+[0m11:12:41.319576 [info ] [MainThread]: Running with dbt=1.13.0-rc1
+[0m11:12:41.320410 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug --profiles-dir .', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\One\\Desktop\\payments-pipeline\\dbt\\logs'}
+[0m11:12:41.320930 [debug] [MainThread]: Tracking: tracking
+[0m11:12:41.353338 [info ] [MainThread]: dbt version: 1.13.0-rc1
+[0m11:12:41.353865 [info ] [MainThread]: python version: 3.14.2
+[0m11:12:41.354224 [info ] [MainThread]: python path: C:\Users\One\Desktop\payments-pipeline\.venv\Scripts\python.exe
+[0m11:12:41.354530 [info ] [MainThread]: os info: Windows-11-10.0.26300-SP0
+[0m11:12:41.645872 [info ] [MainThread]: Using profiles dir at .
+[0m11:12:41.646625 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m11:12:41.647171 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\One\Desktop\payments-pipeline\dbt\dbt_project.yml
+[0m11:12:41.648538 [info ] [MainThread]: adapter type: postgres
+[0m11:12:41.649039 [info ] [MainThread]: adapter version: 1.11.0
+[0m11:12:41.757798 [info ] [MainThread]: Configuration:
+[0m11:12:41.758723 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:12:41.759367 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:12:41.759945 [info ] [MainThread]: Required dependencies:
+[0m11:12:41.760496 [debug] [MainThread]: Executing "git --help"
+[0m11:12:41.826098 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:12:41.826990 [debug] [MainThread]: STDERR: "b''"
+[0m11:12:41.827723 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:12:41.828350 [info ] [MainThread]: Connection:
+[0m11:12:41.828897 [info ] [MainThread]:   host: localhost
+[0m11:12:41.829391 [info ] [MainThread]:   port: 5432
+[0m11:12:41.829838 [info ] [MainThread]:   user: payments
+[0m11:12:41.830297 [info ] [MainThread]:   database: payments
+[0m11:12:41.830784 [info ] [MainThread]:   schema: analytics
+[0m11:12:41.831110 [info ] [MainThread]:   connect_timeout: 10
+[0m11:12:41.831410 [info ] [MainThread]:   role: None
+[0m11:12:41.831686 [info ] [MainThread]:   search_path: None
+[0m11:12:41.831950 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:12:41.832224 [info ] [MainThread]:   sslmode: None
+[0m11:12:41.832483 [info ] [MainThread]:   sslcert: None
+[0m11:12:41.832755 [info ] [MainThread]:   sslkey: None
+[0m11:12:41.833118 [info ] [MainThread]:   sslrootcert: None
+[0m11:12:41.833493 [info ] [MainThread]:   application_name: dbt
+[0m11:12:41.834119 [info ] [MainThread]:   autocommit: False
+[0m11:12:41.835169 [info ] [MainThread]:   retries: 1
+[0m11:12:41.836368 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m11:12:42.006814 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:12:49.342200 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:12:49.343681 [debug] [MainThread]: On debug: select 1 as id
+[0m11:12:49.344920 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:12:49.419236 [debug] [MainThread]: SQL status: SELECT 1 in 0.074 seconds
+[0m11:12:49.421310 [debug] [MainThread]: On debug: Close
+[0m11:12:49.421831 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:12:49.422793 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:12:49.424701 [debug] [MainThread]: Command `dbt debug` succeeded at 11:12:49.424350 after 8.32 seconds
+[0m11:12:49.425521 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:12:49.426310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D89919AD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8996656D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8944E0490>]}
+[0m11:12:49.427106 [debug] [MainThread]: Flushing usage events
+[0m11:12:50.599235 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:12:54.357782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3A951EA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3A713CE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ABF5B9D0>]}
+
+
+============================== 11:12:54.373894 | 031dac32-8baa-4eb7-aa9f-0f4ccef46144 ==============================
+[0m11:12:54.373894 [info ] [MainThread]: Running with dbt=1.13.0-rc1
+[0m11:12:54.375125 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt build --profiles-dir .', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\One\\Desktop\\payments-pipeline\\dbt\\logs'}
+[0m11:12:54.375717 [debug] [MainThread]: Tracking: tracking
+[0m11:12:54.838537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ABF2D6E0>]}
+[0m11:12:54.909117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AC066BE0>]}
+[0m11:12:54.911605 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m11:12:55.127321 [debug] [MainThread]: checksum: 9d4eb51b313e24fbb074aebad55a2a81a055d2f5e96f504f3f4c73f62303339a, vars: {}, profile: payments, target: dev, version: 1.13.0rc1
+[0m11:12:55.128358 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:12:55.129048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ABF35750>]}
+[0m11:13:00.676080 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on 'fact_transactions'
+in package 'payments' (models\marts\_marts.yml). Arguments to generic tests
+should be nested under the `arguments` property.
+[0m11:13:00.677193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ADFFCF50>]}
+[0m11:13:01.177021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AE1BEB30>]}
+[0m11:13:01.432247 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\One\Desktop\payments-pipeline\dbt\target\manifest.json
+[0m11:13:01.436687 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\One\Desktop\payments-pipeline\dbt\target\semantic_manifest.json
+[0m11:13:01.498109 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\One\Desktop\payments-pipeline\dbt\target\osi_document.json
+[0m11:13:01.603711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AE6AB930>]}
+[0m11:13:01.605039 [info ] [MainThread]: Found 9 models, 27 data tests, 3 sources, 477 macros
+[0m11:13:01.616773 [info ] [MainThread]: 
+[0m11:13:01.618174 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:13:01.619335 [info ] [MainThread]: 
+[0m11:13:01.620459 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:13:01.630422 [debug] [ThreadPool]: Acquiring new postgres connection 'list_payments'
+[0m11:13:01.732991 [debug] [ThreadPool]: Using postgres connection "list_payments"
+[0m11:13:01.733944 [debug] [ThreadPool]: On list_payments: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "connection_name": "list_payments"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:13:01.734499 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:13:01.800616 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.066 seconds
+[0m11:13:01.802943 [debug] [ThreadPool]: On list_payments: Close
+[0m11:13:01.804977 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_payments, now create_payments_analytics)
+[0m11:13:01.805819 [debug] [ThreadPool]: Creating schema "database: "payments"
+schema: "analytics"
+"
+[0m11:13:01.813663 [debug] [ThreadPool]: Using postgres connection "create_payments_analytics"
+[0m11:13:01.814494 [debug] [ThreadPool]: On create_payments_analytics: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "connection_name": "create_payments_analytics"} */
+create schema if not exists "analytics"
+[0m11:13:01.814972 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:13:01.850953 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.036 seconds
+[0m11:13:01.852201 [debug] [ThreadPool]: On create_payments_analytics: COMMIT
+[0m11:13:01.852632 [debug] [ThreadPool]: Using postgres connection "create_payments_analytics"
+[0m11:13:01.852952 [debug] [ThreadPool]: On create_payments_analytics: COMMIT
+[0m11:13:01.856663 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m11:13:01.857121 [debug] [ThreadPool]: On create_payments_analytics: Close
+[0m11:13:01.859400 [debug] [ThreadPool]: Acquiring new postgres connection 'list_payments_analytics'
+[0m11:13:01.864942 [debug] [ThreadPool]: Using postgres connection "list_payments_analytics"
+[0m11:13:01.865325 [debug] [ThreadPool]: On list_payments_analytics: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "connection_name": "list_payments_analytics"} */
+select
+      'payments' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'payments' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'payments' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'payments' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m11:13:01.865623 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:13:01.900538 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.035 seconds
+[0m11:13:01.901854 [debug] [ThreadPool]: On list_payments_analytics: ROLLBACK
+[0m11:13:01.902875 [debug] [ThreadPool]: On list_payments_analytics: Close
+[0m11:13:01.907522 [debug] [MainThread]: Using postgres connection "master"
+[0m11:13:01.908028 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:13:01.908457 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:13:01.966612 [debug] [MainThread]: SQL status: SELECT 0 in 0.058 seconds
+[0m11:13:01.969269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AE6EFE90>]}
+[0m11:13:01.970224 [debug] [MainThread]: On master: ROLLBACK
+[0m11:13:01.971922 [debug] [MainThread]: On master: COMMIT
+[0m11:13:01.972648 [debug] [MainThread]: Using postgres connection "master"
+[0m11:13:01.973078 [debug] [MainThread]: On master: COMMIT
+[0m11:13:01.974759 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m11:13:01.975335 [debug] [MainThread]: On master: Close
+[0m11:13:02.013510 [debug] [Thread-3 (]: Began running node model.payments.stg_transactions
+[0m11:13:02.015408 [debug] [Thread-2 (]: Began running node model.payments.stg_merchants
+[0m11:13:02.014242 [debug] [Thread-1 (]: Began running node model.payments.stg_customers
+[0m11:13:02.014986 [info ] [Thread-3 (]: 3 of 36 START sql view model analytics.stg_transactions ........................ [RUN]
+[0m11:13:02.018480 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.payments.stg_transactions'
+[0m11:13:02.018904 [debug] [Thread-3 (]: Began compiling node model.payments.stg_transactions
+[0m11:13:02.016730 [info ] [Thread-2 (]: 2 of 36 START sql view model analytics.stg_merchants ........................... [RUN]
+[0m11:13:02.017716 [info ] [Thread-1 (]: 1 of 36 START sql view model analytics.stg_customers ........................... [RUN]
+[0m11:13:02.074791 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.payments.stg_customers'
+[0m11:13:02.075352 [debug] [Thread-1 (]: Began compiling node model.payments.stg_customers
+[0m11:13:02.077816 [debug] [Thread-1 (]: Writing injected SQL for node "model.payments.stg_customers"
+[0m11:13:02.073056 [debug] [Thread-3 (]: Writing injected SQL for node "model.payments.stg_transactions"
+[0m11:13:02.073998 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.payments.stg_merchants'
+[0m11:13:02.078690 [debug] [Thread-2 (]: Began compiling node model.payments.stg_merchants
+[0m11:13:02.081040 [debug] [Thread-2 (]: Writing injected SQL for node "model.payments.stg_merchants"
+[0m11:13:02.084835 [debug] [Thread-3 (]: Began executing node model.payments.stg_transactions
+[0m11:13:02.131212 [debug] [Thread-3 (]: Writing runtime sql for node "model.payments.stg_transactions"
+[0m11:13:02.133059 [debug] [Thread-1 (]: Began executing node model.payments.stg_customers
+[0m11:13:02.137820 [debug] [Thread-1 (]: Writing runtime sql for node "model.payments.stg_customers"
+[0m11:13:02.138568 [debug] [Thread-2 (]: Began executing node model.payments.stg_merchants
+[0m11:13:02.141980 [debug] [Thread-2 (]: Writing runtime sql for node "model.payments.stg_merchants"
+[0m11:13:02.144189 [debug] [Thread-3 (]: Using postgres connection "model.payments.stg_transactions"
+[0m11:13:02.144960 [debug] [Thread-3 (]: On model.payments.stg_transactions: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_transactions"} */
+
+  create view "payments"."analytics"."stg_transactions__dbt_tmp"
+    
+    
+  as (
+    -- Clean the raw transactions: tidy text, drop rows with no amount, add a date column.
+with src as (
+    select * from "payments"."public"."raw_transactions"
+)
+
+select
+    transaction_id,
+    customer_id,
+    merchant_id,
+    trim(channel)                  as channel,
+    amount::numeric(12, 2)         as amount,
+    coalesce(fee, 0)::numeric(12, 2) as fee,
+    lower(trim(status))            as status,
+    created_at,
+    created_at::date               as transaction_date,
+    loaded_at
+from src
+where amount is not null
+  );
+[0m11:13:02.145501 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:13:02.147122 [debug] [Thread-1 (]: Using postgres connection "model.payments.stg_customers"
+[0m11:13:02.148819 [debug] [Thread-1 (]: On model.payments.stg_customers: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_customers"} */
+
+  create view "payments"."analytics"."stg_customers__dbt_tmp"
+    
+    
+  as (
+    select
+    customer_id,
+    trim(region) as region,
+    signup_date
+from "payments"."public"."raw_customers"
+  );
+[0m11:13:02.149463 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:13:02.147926 [debug] [Thread-2 (]: Using postgres connection "model.payments.stg_merchants"
+[0m11:13:02.151581 [debug] [Thread-2 (]: On model.payments.stg_merchants: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_merchants"} */
+
+  create view "payments"."analytics"."stg_merchants__dbt_tmp"
+    
+    
+  as (
+    select
+    merchant_id,
+    trim(merchant_name) as merchant_name,
+    lower(trim(category)) as category
+from "payments"."public"."raw_merchants"
+  );
+[0m11:13:02.152483 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:13:02.180653 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.031 seconds
+[0m11:13:02.189971 [debug] [Thread-1 (]: Using postgres connection "model.payments.stg_customers"
+[0m11:13:02.191631 [debug] [Thread-1 (]: On model.payments.stg_customers: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_customers"} */
+alter table "payments"."analytics"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m11:13:02.190813 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.045 seconds
+[0m11:13:02.181157 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.029 seconds
+[0m11:13:02.197819 [debug] [Thread-2 (]: Using postgres connection "model.payments.stg_merchants"
+[0m11:13:02.196072 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m11:13:02.195443 [debug] [Thread-3 (]: Using postgres connection "model.payments.stg_transactions"
+[0m11:13:02.198181 [debug] [Thread-2 (]: On model.payments.stg_merchants: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_merchants"} */
+alter table "payments"."analytics"."stg_merchants__dbt_tmp" rename to "stg_merchants"
+[0m11:13:02.213325 [debug] [Thread-1 (]: On model.payments.stg_customers: COMMIT
+[0m11:13:02.214384 [debug] [Thread-1 (]: Using postgres connection "model.payments.stg_customers"
+[0m11:13:02.213770 [debug] [Thread-3 (]: On model.payments.stg_transactions: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_transactions"} */
+alter table "payments"."analytics"."stg_transactions__dbt_tmp" rename to "stg_transactions"
+[0m11:13:02.214997 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:13:02.217292 [debug] [Thread-2 (]: On model.payments.stg_merchants: COMMIT
+[0m11:13:02.217673 [debug] [Thread-2 (]: Using postgres connection "model.payments.stg_merchants"
+[0m11:13:02.217991 [debug] [Thread-2 (]: On model.payments.stg_merchants: COMMIT
+[0m11:13:02.215332 [debug] [Thread-1 (]: On model.payments.stg_customers: COMMIT
+[0m11:13:02.218402 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m11:13:02.220565 [debug] [Thread-3 (]: On model.payments.stg_transactions: COMMIT
+[0m11:13:02.220934 [debug] [Thread-3 (]: Using postgres connection "model.payments.stg_transactions"
+[0m11:13:02.222126 [debug] [Thread-3 (]: On model.payments.stg_transactions: COMMIT
+[0m11:13:02.221475 [debug] [Thread-2 (]: SQL status: COMMIT in 0.003 seconds
+[0m11:13:02.228288 [debug] [Thread-2 (]: Applying DROP to: "payments"."analytics"."stg_merchants__dbt_backup"
+[0m11:13:02.235659 [debug] [Thread-2 (]: Using postgres connection "model.payments.stg_merchants"
+[0m11:13:02.228693 [debug] [Thread-3 (]: SQL status: COMMIT in 0.006 seconds
+[0m11:13:02.222696 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m11:13:02.236613 [debug] [Thread-2 (]: On model.payments.stg_merchants: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_merchants"} */
+drop view if exists "payments"."analytics"."stg_merchants__dbt_backup" cascade
+[0m11:13:02.238457 [debug] [Thread-3 (]: Applying DROP to: "payments"."analytics"."stg_transactions__dbt_backup"
+[0m11:13:02.240737 [debug] [Thread-3 (]: Using postgres connection "model.payments.stg_transactions"
+[0m11:13:02.241123 [debug] [Thread-3 (]: On model.payments.stg_transactions: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_transactions"} */
+drop view if exists "payments"."analytics"."stg_transactions__dbt_backup" cascade
+[0m11:13:02.239833 [debug] [Thread-1 (]: Applying DROP to: "payments"."analytics"."stg_customers__dbt_backup"
+[0m11:13:02.242428 [debug] [Thread-1 (]: Using postgres connection "model.payments.stg_customers"
+[0m11:13:02.242793 [debug] [Thread-1 (]: On model.payments.stg_customers: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.stg_customers"} */
+drop view if exists "payments"."analytics"."stg_customers__dbt_backup" cascade
+[0m11:13:02.243264 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m11:13:02.245805 [debug] [Thread-2 (]: On model.payments.stg_merchants: Close
+[0m11:13:02.246864 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.005 seconds
+[0m11:13:02.248910 [debug] [Thread-3 (]: On model.payments.stg_transactions: Close
+[0m11:13:02.249952 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.006 seconds
+[0m11:13:02.253527 [debug] [Thread-1 (]: On model.payments.stg_customers: Close
+[0m11:13:02.256073 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AE528310>]}
+[0m11:13:02.257160 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AE0A76B0>]}
+[0m11:13:02.257942 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3A9A5A3D0>]}
+[0m11:13:02.256823 [info ] [Thread-2 (]: 2 of 36 OK created sql view model analytics.stg_merchants ...................... [[32mCREATE VIEW[0m in 0.18s]
+[0m11:13:02.258953 [debug] [Thread-2 (]: Finished running node model.payments.stg_merchants
+[0m11:13:02.257702 [info ] [Thread-1 (]: 1 of 36 OK created sql view model analytics.stg_customers ...................... [[32mCREATE VIEW[0m in 0.18s]
+[0m11:13:02.260047 [debug] [Thread-1 (]: Finished running node model.payments.stg_customers
+[0m11:13:02.260573 [debug] [Thread-4 (]: Began running node test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d
+[0m11:13:02.261325 [debug] [Thread-2 (]: Began running node test.payments.unique_stg_merchants_merchant_id.76938432c1
+[0m11:13:02.260921 [info ] [Thread-4 (]: 4 of 36 START test not_null_stg_merchants_merchant_id .......................... [RUN]
+[0m11:13:02.262213 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d'
+[0m11:13:02.262889 [debug] [Thread-4 (]: Began compiling node test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d
+[0m11:13:02.277371 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d"
+[0m11:13:02.258438 [info ] [Thread-3 (]: 3 of 36 OK created sql view model analytics.stg_transactions ................... [[32mCREATE VIEW[0m in 0.24s]
+[0m11:13:02.278586 [debug] [Thread-3 (]: Finished running node model.payments.stg_transactions
+[0m11:13:02.279369 [debug] [Thread-3 (]: Began running node test.payments.unique_stg_customers_customer_id.c7614daada
+[0m11:13:02.262583 [debug] [Thread-1 (]: Began running node test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:13:02.261662 [info ] [Thread-2 (]: 5 of 36 START test unique_stg_merchants_merchant_id ............................ [RUN]
+[0m11:13:02.283568 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.payments.stg_merchants, now test.payments.unique_stg_merchants_merchant_id.76938432c1)
+[0m11:13:02.285171 [debug] [Thread-2 (]: Began compiling node test.payments.unique_stg_merchants_merchant_id.76938432c1
+[0m11:13:02.294954 [debug] [Thread-2 (]: Writing injected SQL for node "test.payments.unique_stg_merchants_merchant_id.76938432c1"
+[0m11:13:02.280340 [info ] [Thread-3 (]: 7 of 36 START test unique_stg_customers_customer_id ............................ [RUN]
+[0m11:13:02.296246 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.payments.stg_transactions, now test.payments.unique_stg_customers_customer_id.c7614daada)
+[0m11:13:02.282513 [info ] [Thread-1 (]: 6 of 36 START test not_null_stg_customers_customer_id .......................... [RUN]
+[0m11:13:02.298450 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.payments.stg_customers, now test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa)
+[0m11:13:02.299267 [debug] [Thread-1 (]: Began compiling node test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:13:02.296975 [debug] [Thread-3 (]: Began compiling node test.payments.unique_stg_customers_customer_id.c7614daada
+[0m11:13:02.297558 [debug] [Thread-4 (]: Began executing node test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d
+[0m11:13:02.306508 [debug] [Thread-1 (]: Writing injected SQL for node "test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m11:13:02.307166 [debug] [Thread-2 (]: Began executing node test.payments.unique_stg_merchants_merchant_id.76938432c1
+[0m11:13:02.316952 [debug] [Thread-3 (]: Writing injected SQL for node "test.payments.unique_stg_customers_customer_id.c7614daada"
+[0m11:13:02.351681 [debug] [Thread-2 (]: Writing runtime sql for node "test.payments.unique_stg_merchants_merchant_id.76938432c1"
+[0m11:13:02.356014 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d"
+[0m11:13:02.357759 [debug] [Thread-1 (]: Began executing node test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:13:02.360733 [debug] [Thread-1 (]: Writing runtime sql for node "test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m11:13:02.362302 [debug] [Thread-3 (]: Began executing node test.payments.unique_stg_customers_customer_id.c7614daada
+[0m11:13:02.365059 [debug] [Thread-3 (]: Writing runtime sql for node "test.payments.unique_stg_customers_customer_id.c7614daada"
+[0m11:13:02.366122 [debug] [Thread-2 (]: Using postgres connection "test.payments.unique_stg_merchants_merchant_id.76938432c1"
+[0m11:13:02.367444 [debug] [Thread-2 (]: On test.payments.unique_stg_merchants_merchant_id.76938432c1: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_stg_merchants_merchant_id.76938432c1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    merchant_id as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."stg_merchants"
+where merchant_id is not null
+group by merchant_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.368628 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:02.370429 [debug] [Thread-1 (]: Using postgres connection "test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m11:13:02.371792 [debug] [Thread-4 (]: Using postgres connection "test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d"
+[0m11:13:02.373031 [debug] [Thread-3 (]: Using postgres connection "test.payments.unique_stg_customers_customer_id.c7614daada"
+[0m11:13:02.374403 [debug] [Thread-1 (]: On test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "payments"."analytics"."stg_customers"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.376247 [debug] [Thread-4 (]: On test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select merchant_id
+from "payments"."analytics"."stg_merchants"
+where merchant_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.378938 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:13:02.378336 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:02.377613 [debug] [Thread-3 (]: On test.payments.unique_stg_customers_customer_id.c7614daada: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_stg_customers_customer_id.c7614daada"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."stg_customers"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.380169 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:02.415597 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.047 seconds
+[0m11:13:02.424141 [debug] [Thread-2 (]: On test.payments.unique_stg_merchants_merchant_id.76938432c1: ROLLBACK
+[0m11:13:02.426130 [debug] [Thread-2 (]: On test.payments.unique_stg_merchants_merchant_id.76938432c1: Close
+[0m11:13:02.427624 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.048 seconds
+[0m11:13:02.431225 [debug] [Thread-4 (]: On test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d: ROLLBACK
+[0m11:13:02.433509 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.053 seconds
+[0m11:13:02.436294 [debug] [Thread-3 (]: On test.payments.unique_stg_customers_customer_id.c7614daada: ROLLBACK
+[0m11:13:02.437869 [debug] [Thread-4 (]: On test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d: Close
+[0m11:13:02.432639 [info ] [Thread-2 (]: 5 of 36 PASS unique_stg_merchants_merchant_id .................................. [[32mPASS[0m in 0.15s]
+[0m11:13:02.439968 [debug] [Thread-2 (]: Finished running node test.payments.unique_stg_merchants_merchant_id.76938432c1
+[0m11:13:02.437144 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.059 seconds
+[0m11:13:02.438731 [debug] [Thread-3 (]: On test.payments.unique_stg_customers_customer_id.c7614daada: Close
+[0m11:13:02.441691 [debug] [Thread-2 (]: Began running node test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62
+[0m11:13:02.444100 [debug] [Thread-1 (]: On test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa: ROLLBACK
+[0m11:13:02.441056 [info ] [Thread-4 (]: 4 of 36 PASS not_null_stg_merchants_merchant_id ................................ [[32mPASS[0m in 0.18s]
+[0m11:13:02.449853 [debug] [Thread-4 (]: Finished running node test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d
+[0m11:13:02.451527 [debug] [Thread-4 (]: Began running node test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1
+[0m11:13:02.453036 [debug] [Thread-1 (]: On test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa: Close
+[0m11:13:02.447018 [info ] [Thread-3 (]: 7 of 36 PASS unique_stg_customers_customer_id .................................. [[32mPASS[0m in 0.15s]
+[0m11:13:02.445380 [info ] [Thread-2 (]: 8 of 36 START test accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card  [RUN]
+[0m11:13:02.454984 [info ] [Thread-4 (]: 9 of 36 START test accepted_values_stg_transactions_status__success__failed__pending  [RUN]
+[0m11:13:02.458074 [debug] [Thread-3 (]: Finished running node test.payments.unique_stg_customers_customer_id.c7614daada
+[0m11:13:02.456395 [info ] [Thread-1 (]: 6 of 36 PASS not_null_stg_customers_customer_id ................................ [[32mPASS[0m in 0.16s]
+[0m11:13:02.460094 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.payments.unique_stg_merchants_merchant_id.76938432c1, now test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62)
+[0m11:13:02.461010 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.payments.not_null_stg_merchants_merchant_id.ac3297bd9d, now test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1)
+[0m11:13:02.461842 [debug] [Thread-3 (]: Began running node test.payments.not_null_stg_transactions_amount.3629b5421e
+[0m11:13:02.463000 [debug] [Thread-1 (]: Finished running node test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:13:02.463763 [debug] [Thread-2 (]: Began compiling node test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62
+[0m11:13:02.464722 [debug] [Thread-4 (]: Began compiling node test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1
+[0m11:13:02.465637 [info ] [Thread-3 (]: 10 of 36 START test not_null_stg_transactions_amount ........................... [RUN]
+[0m11:13:02.467527 [debug] [Thread-1 (]: Began running node test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m11:13:02.483144 [debug] [Thread-2 (]: Writing injected SQL for node "test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62"
+[0m11:13:02.495048 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1"
+[0m11:13:02.496071 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.payments.unique_stg_customers_customer_id.c7614daada, now test.payments.not_null_stg_transactions_amount.3629b5421e)
+[0m11:13:02.498712 [debug] [Thread-3 (]: Began compiling node test.payments.not_null_stg_transactions_amount.3629b5421e
+[0m11:13:02.497227 [info ] [Thread-1 (]: 11 of 36 START test not_null_stg_transactions_transaction_id ................... [RUN]
+[0m11:13:02.507943 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.payments.not_null_stg_customers_customer_id.e2cfb1f9aa, now test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4)
+[0m11:13:02.506805 [debug] [Thread-3 (]: Writing injected SQL for node "test.payments.not_null_stg_transactions_amount.3629b5421e"
+[0m11:13:02.508945 [debug] [Thread-1 (]: Began compiling node test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m11:13:02.509813 [debug] [Thread-2 (]: Began executing node test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62
+[0m11:13:02.510525 [debug] [Thread-4 (]: Began executing node test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1
+[0m11:13:02.517667 [debug] [Thread-1 (]: Writing injected SQL for node "test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4"
+[0m11:13:02.521021 [debug] [Thread-2 (]: Writing runtime sql for node "test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62"
+[0m11:13:02.524068 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1"
+[0m11:13:02.525466 [debug] [Thread-3 (]: Began executing node test.payments.not_null_stg_transactions_amount.3629b5421e
+[0m11:13:02.528232 [debug] [Thread-3 (]: Writing runtime sql for node "test.payments.not_null_stg_transactions_amount.3629b5421e"
+[0m11:13:02.529383 [debug] [Thread-4 (]: Using postgres connection "test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1"
+[0m11:13:02.529884 [debug] [Thread-4 (]: On test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from "payments"."analytics"."stg_transactions"
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'success','failed','pending'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.532059 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:02.532857 [debug] [Thread-3 (]: Using postgres connection "test.payments.not_null_stg_transactions_amount.3629b5421e"
+[0m11:13:02.531248 [debug] [Thread-2 (]: Using postgres connection "test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62"
+[0m11:13:02.533662 [debug] [Thread-1 (]: Began executing node test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m11:13:02.534846 [debug] [Thread-3 (]: On test.payments.not_null_stg_transactions_amount.3629b5421e: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_stg_transactions_amount.3629b5421e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount
+from "payments"."analytics"."stg_transactions"
+where amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.536181 [debug] [Thread-2 (]: On test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        channel as value_field,
+        count(*) as n_records
+
+    from "payments"."analytics"."stg_transactions"
+    group by channel
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'MTN','Telecel','AirtelTigo','card'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.541315 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:02.539733 [debug] [Thread-1 (]: Writing runtime sql for node "test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4"
+[0m11:13:02.540581 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:02.543280 [debug] [Thread-1 (]: Using postgres connection "test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4"
+[0m11:13:02.543698 [debug] [Thread-1 (]: On test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "payments"."analytics"."stg_transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.544874 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:02.570645 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.039 seconds
+[0m11:13:02.573644 [debug] [Thread-4 (]: On test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1: ROLLBACK
+[0m11:13:02.575339 [debug] [Thread-4 (]: On test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1: Close
+[0m11:13:02.578917 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.038 seconds
+[0m11:13:02.583485 [debug] [Thread-3 (]: On test.payments.not_null_stg_transactions_amount.3629b5421e: ROLLBACK
+[0m11:13:02.580530 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.036 seconds
+[0m11:13:02.577657 [info ] [Thread-4 (]: 9 of 36 PASS accepted_values_stg_transactions_status__success__failed__pending . [[32mPASS[0m in 0.12s]
+[0m11:13:02.584399 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.043 seconds
+[0m11:13:02.586788 [debug] [Thread-1 (]: On test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4: ROLLBACK
+[0m11:13:02.587533 [debug] [Thread-3 (]: On test.payments.not_null_stg_transactions_amount.3629b5421e: Close
+[0m11:13:02.588941 [debug] [Thread-4 (]: Finished running node test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1
+[0m11:13:02.591289 [debug] [Thread-2 (]: On test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62: ROLLBACK
+[0m11:13:02.594091 [debug] [Thread-4 (]: Began running node test.payments.unique_stg_transactions_transaction_id.ee9a78a396
+[0m11:13:02.594849 [debug] [Thread-1 (]: On test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4: Close
+[0m11:13:02.596061 [info ] [Thread-4 (]: 12 of 36 START test unique_stg_transactions_transaction_id ..................... [RUN]
+[0m11:13:02.597435 [debug] [Thread-2 (]: On test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62: Close
+[0m11:13:02.592992 [info ] [Thread-3 (]: 10 of 36 PASS not_null_stg_transactions_amount ................................. [[32mPASS[0m in 0.10s]
+[0m11:13:02.601587 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.payments.accepted_values_stg_transactions_status__success__failed__pending.07a24e32c1, now test.payments.unique_stg_transactions_transaction_id.ee9a78a396)
+[0m11:13:02.599484 [info ] [Thread-1 (]: 11 of 36 PASS not_null_stg_transactions_transaction_id ......................... [[32mPASS[0m in 0.09s]
+[0m11:13:02.605317 [debug] [Thread-3 (]: Finished running node test.payments.not_null_stg_transactions_amount.3629b5421e
+[0m11:13:02.608185 [debug] [Thread-4 (]: Began compiling node test.payments.unique_stg_transactions_transaction_id.ee9a78a396
+[0m11:13:02.607351 [info ] [Thread-2 (]: 8 of 36 PASS accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card  [[32mPASS[0m in 0.15s]
+[0m11:13:02.609631 [debug] [Thread-1 (]: Finished running node test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m11:13:02.610554 [debug] [Thread-3 (]: Began running node model.payments.dim_merchant
+[0m11:13:02.621053 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.unique_stg_transactions_transaction_id.ee9a78a396"
+[0m11:13:02.622223 [debug] [Thread-2 (]: Finished running node test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62
+[0m11:13:02.623149 [debug] [Thread-1 (]: Began running node model.payments.dim_customer
+[0m11:13:02.624296 [info ] [Thread-3 (]: 13 of 36 START sql table model analytics.dim_merchant .......................... [RUN]
+[0m11:13:02.626729 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.payments.not_null_stg_transactions_amount.3629b5421e, now model.payments.dim_merchant)
+[0m11:13:02.627827 [debug] [Thread-3 (]: Began compiling node model.payments.dim_merchant
+[0m11:13:02.631225 [debug] [Thread-3 (]: Writing injected SQL for node "model.payments.dim_merchant"
+[0m11:13:02.632095 [debug] [Thread-4 (]: Began executing node test.payments.unique_stg_transactions_transaction_id.ee9a78a396
+[0m11:13:02.625881 [info ] [Thread-1 (]: 14 of 36 START sql table model analytics.dim_customer .......................... [RUN]
+[0m11:13:02.636843 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.payments.not_null_stg_transactions_transaction_id.1d00a8e2e4, now model.payments.dim_customer)
+[0m11:13:02.635774 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.unique_stg_transactions_transaction_id.ee9a78a396"
+[0m11:13:02.637800 [debug] [Thread-1 (]: Began compiling node model.payments.dim_customer
+[0m11:13:02.641477 [debug] [Thread-1 (]: Writing injected SQL for node "model.payments.dim_customer"
+[0m11:13:02.642541 [debug] [Thread-3 (]: Began executing node model.payments.dim_merchant
+[0m11:13:02.675211 [debug] [Thread-4 (]: Using postgres connection "test.payments.unique_stg_transactions_transaction_id.ee9a78a396"
+[0m11:13:02.685203 [debug] [Thread-4 (]: On test.payments.unique_stg_transactions_transaction_id.ee9a78a396: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_stg_transactions_transaction_id.ee9a78a396"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."stg_transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:02.686093 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:02.684321 [debug] [Thread-3 (]: Writing runtime sql for node "model.payments.dim_merchant"
+[0m11:13:02.686747 [debug] [Thread-1 (]: Began executing node model.payments.dim_customer
+[0m11:13:02.692763 [debug] [Thread-1 (]: Writing runtime sql for node "model.payments.dim_customer"
+[0m11:13:02.695795 [debug] [Thread-3 (]: Using postgres connection "model.payments.dim_merchant"
+[0m11:13:02.697860 [debug] [Thread-3 (]: On model.payments.dim_merchant: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_merchant"} */
+
+  
+    
+
+  create  table "payments"."analytics"."dim_merchant__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    md5(merchant_id) as merchant_key,
+    merchant_id,
+    merchant_name,
+    category
+from "payments"."analytics"."stg_merchants"
+  );
+  
+[0m11:13:02.698657 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:02.696846 [debug] [Thread-1 (]: Using postgres connection "model.payments.dim_customer"
+[0m11:13:02.700343 [debug] [Thread-1 (]: On model.payments.dim_customer: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_customer"} */
+
+  
+    
+
+  create  table "payments"."analytics"."dim_customer__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    md5(customer_id) as customer_key,
+    customer_id,
+    region,
+    signup_date
+from "payments"."analytics"."stg_customers"
+  );
+  
+[0m11:13:02.701216 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:02.723925 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.038 seconds
+[0m11:13:02.726592 [debug] [Thread-4 (]: On test.payments.unique_stg_transactions_transaction_id.ee9a78a396: ROLLBACK
+[0m11:13:02.728851 [debug] [Thread-4 (]: On test.payments.unique_stg_transactions_transaction_id.ee9a78a396: Close
+[0m11:13:02.730636 [info ] [Thread-4 (]: 12 of 36 PASS unique_stg_transactions_transaction_id ........................... [[32mPASS[0m in 0.13s]
+[0m11:13:02.732630 [debug] [Thread-4 (]: Finished running node test.payments.unique_stg_transactions_transaction_id.ee9a78a396
+[0m11:13:02.734687 [debug] [Thread-2 (]: Began running node model.payments.dim_channel
+[0m11:13:02.736114 [debug] [Thread-4 (]: Began running node model.payments.dim_date
+[0m11:13:02.737240 [info ] [Thread-2 (]: 15 of 36 START sql table model analytics.dim_channel ........................... [RUN]
+[0m11:13:02.741085 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.payments.accepted_values_stg_transactions_channel__MTN__Telecel__AirtelTigo__card.075d903a62, now model.payments.dim_channel)
+[0m11:13:02.743239 [debug] [Thread-2 (]: Began compiling node model.payments.dim_channel
+[0m11:13:02.738579 [info ] [Thread-4 (]: 16 of 36 START sql table model analytics.dim_date .............................. [RUN]
+[0m11:13:02.750652 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.payments.unique_stg_transactions_transaction_id.ee9a78a396, now model.payments.dim_date)
+[0m11:13:02.748926 [debug] [Thread-2 (]: Writing injected SQL for node "model.payments.dim_channel"
+[0m11:13:02.752475 [debug] [Thread-4 (]: Began compiling node model.payments.dim_date
+[0m11:13:02.759125 [debug] [Thread-4 (]: Writing injected SQL for node "model.payments.dim_date"
+[0m11:13:02.760052 [debug] [Thread-1 (]: SQL status: SELECT 300 in 0.059 seconds
+[0m11:13:02.770355 [debug] [Thread-1 (]: Using postgres connection "model.payments.dim_customer"
+[0m11:13:02.770786 [debug] [Thread-1 (]: On model.payments.dim_customer: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_customer"} */
+alter table "payments"."analytics"."dim_customer__dbt_tmp" rename to "dim_customer"
+[0m11:13:02.761415 [debug] [Thread-3 (]: SQL status: SELECT 40 in 0.063 seconds
+[0m11:13:02.775062 [debug] [Thread-3 (]: Using postgres connection "model.payments.dim_merchant"
+[0m11:13:02.775854 [debug] [Thread-3 (]: On model.payments.dim_merchant: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_merchant"} */
+alter table "payments"."analytics"."dim_merchant__dbt_tmp" rename to "dim_merchant"
+[0m11:13:02.777018 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m11:13:02.780628 [debug] [Thread-1 (]: On model.payments.dim_customer: COMMIT
+[0m11:13:02.778811 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m11:13:02.777959 [debug] [Thread-2 (]: Began executing node model.payments.dim_channel
+[0m11:13:02.781205 [debug] [Thread-4 (]: Began executing node model.payments.dim_date
+[0m11:13:02.781966 [debug] [Thread-1 (]: Using postgres connection "model.payments.dim_customer"
+[0m11:13:02.785058 [debug] [Thread-3 (]: On model.payments.dim_merchant: COMMIT
+[0m11:13:02.791043 [debug] [Thread-2 (]: Writing runtime sql for node "model.payments.dim_channel"
+[0m11:13:02.796078 [debug] [Thread-4 (]: Writing runtime sql for node "model.payments.dim_date"
+[0m11:13:02.796909 [debug] [Thread-1 (]: On model.payments.dim_customer: COMMIT
+[0m11:13:02.797801 [debug] [Thread-3 (]: Using postgres connection "model.payments.dim_merchant"
+[0m11:13:02.799168 [debug] [Thread-3 (]: On model.payments.dim_merchant: COMMIT
+[0m11:13:02.801106 [debug] [Thread-2 (]: Using postgres connection "model.payments.dim_channel"
+[0m11:13:02.802764 [debug] [Thread-2 (]: On model.payments.dim_channel: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_channel"} */
+
+  
+    
+
+  create  table "payments"."analytics"."dim_channel__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select distinct
+    md5(channel) as channel_key,
+    channel      as channel_name,
+    case when channel = 'card' then 'card' else 'mobile_money' end as channel_type
+from "payments"."analytics"."stg_transactions"
+  );
+  
+[0m11:13:02.804182 [debug] [Thread-4 (]: Using postgres connection "model.payments.dim_date"
+[0m11:13:02.804936 [debug] [Thread-1 (]: SQL status: COMMIT in 0.006 seconds
+[0m11:13:02.805823 [debug] [Thread-3 (]: SQL status: COMMIT in 0.006 seconds
+[0m11:13:02.806585 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:02.807406 [debug] [Thread-4 (]: On model.payments.dim_date: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_date"} */
+
+  
+    
+
+  create  table "payments"."analytics"."dim_date__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- One row per day between the first and last transaction.
+with bounds as (
+    select min(transaction_date) as d0, max(transaction_date) as d1
+    from "payments"."analytics"."stg_transactions"
+),
+
+days as (
+    select generate_series(d0, d1, interval '1 day')::date as full_date
+    from bounds
+)
+
+select
+    to_char(full_date, 'YYYYMMDD')::int        as date_key,
+    full_date,
+    extract(isodow from full_date)::int        as day_of_week,
+    trim(to_char(full_date, 'Day'))            as day_name,
+    extract(month from full_date)::int         as month,
+    extract(year from full_date)::int          as year,
+    extract(isodow from full_date) in (6, 7)   as is_weekend
+from days
+  );
+  
+[0m11:13:02.810598 [debug] [Thread-1 (]: Applying DROP to: "payments"."analytics"."dim_customer__dbt_backup"
+[0m11:13:02.813627 [debug] [Thread-3 (]: Applying DROP to: "payments"."analytics"."dim_merchant__dbt_backup"
+[0m11:13:02.814868 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:02.822498 [debug] [Thread-1 (]: Using postgres connection "model.payments.dim_customer"
+[0m11:13:02.825564 [debug] [Thread-1 (]: On model.payments.dim_customer: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_customer"} */
+drop table if exists "payments"."analytics"."dim_customer__dbt_backup" cascade
+[0m11:13:02.824385 [debug] [Thread-3 (]: Using postgres connection "model.payments.dim_merchant"
+[0m11:13:02.826594 [debug] [Thread-3 (]: On model.payments.dim_merchant: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_merchant"} */
+drop table if exists "payments"."analytics"."dim_merchant__dbt_backup" cascade
+[0m11:13:02.827583 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:13:02.831020 [debug] [Thread-1 (]: On model.payments.dim_customer: Close
+[0m11:13:02.832049 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m11:13:02.835587 [debug] [Thread-3 (]: On model.payments.dim_merchant: Close
+[0m11:13:02.836961 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AA1A9630>]}
+[0m11:13:02.839402 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ACED1430>]}
+[0m11:13:02.838303 [info ] [Thread-1 (]: 14 of 36 OK created sql table model analytics.dim_customer ..................... [[32mSELECT 300[0m in 0.20s]
+[0m11:13:02.842354 [debug] [Thread-1 (]: Finished running node model.payments.dim_customer
+[0m11:13:02.842757 [debug] [Thread-1 (]: Began running node model.payments.fact_transactions
+[0m11:13:02.841408 [info ] [Thread-3 (]: 13 of 36 OK created sql table model analytics.dim_merchant ..................... [[32mSELECT 40[0m in 0.21s]
+[0m11:13:02.844434 [debug] [Thread-3 (]: Finished running node model.payments.dim_merchant
+[0m11:13:02.843165 [info ] [Thread-1 (]: 17 of 36 START sql incremental model analytics.fact_transactions ............... [RUN]
+[0m11:13:02.847267 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.payments.dim_customer, now model.payments.fact_transactions)
+[0m11:13:02.846315 [debug] [Thread-3 (]: Began running node test.payments.not_null_dim_customer_customer_key.c289fe4d1f
+[0m11:13:02.848951 [debug] [Thread-1 (]: Began compiling node model.payments.fact_transactions
+[0m11:13:02.858580 [debug] [Thread-1 (]: Writing injected SQL for node "model.payments.fact_transactions"
+[0m11:13:02.850316 [info ] [Thread-3 (]: 18 of 36 START test not_null_dim_customer_customer_key ......................... [RUN]
+[0m11:13:02.860303 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.payments.dim_merchant, now test.payments.not_null_dim_customer_customer_key.c289fe4d1f)
+[0m11:13:02.861998 [debug] [Thread-3 (]: Began compiling node test.payments.not_null_dim_customer_customer_key.c289fe4d1f
+[0m11:13:02.883934 [debug] [Thread-2 (]: SQL status: SELECT 4 in 0.077 seconds
+[0m11:13:02.894660 [debug] [Thread-2 (]: Using postgres connection "model.payments.dim_channel"
+[0m11:13:02.896256 [debug] [Thread-2 (]: On model.payments.dim_channel: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_channel"} */
+alter table "payments"."analytics"."dim_channel__dbt_tmp" rename to "dim_channel"
+[0m11:13:02.885407 [debug] [Thread-3 (]: Writing injected SQL for node "test.payments.not_null_dim_customer_customer_key.c289fe4d1f"
+[0m11:13:02.898999 [debug] [Thread-1 (]: Began executing node model.payments.fact_transactions
+[0m11:13:02.932211 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.035 seconds
+[0m11:13:02.951341 [debug] [Thread-2 (]: On model.payments.dim_channel: COMMIT
+[0m11:13:02.951895 [debug] [Thread-2 (]: Using postgres connection "model.payments.dim_channel"
+[0m11:13:02.952520 [debug] [Thread-4 (]: SQL status: SELECT 7 in 0.138 seconds
+[0m11:13:02.978133 [debug] [Thread-1 (]: Writing runtime sql for node "model.payments.fact_transactions"
+[0m11:13:02.979068 [debug] [Thread-2 (]: On model.payments.dim_channel: COMMIT
+[0m11:13:02.983368 [debug] [Thread-4 (]: Using postgres connection "model.payments.dim_date"
+[0m11:13:02.985418 [debug] [Thread-4 (]: On model.payments.dim_date: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_date"} */
+alter table "payments"."analytics"."dim_date__dbt_tmp" rename to "dim_date"
+[0m11:13:02.984208 [debug] [Thread-3 (]: Began executing node test.payments.not_null_dim_customer_customer_key.c289fe4d1f
+[0m11:13:02.989019 [debug] [Thread-3 (]: Writing runtime sql for node "test.payments.not_null_dim_customer_customer_key.c289fe4d1f"
+[0m11:13:02.990093 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m11:13:02.993446 [debug] [Thread-4 (]: On model.payments.dim_date: COMMIT
+[0m11:13:02.995893 [debug] [Thread-4 (]: Using postgres connection "model.payments.dim_date"
+[0m11:13:02.996572 [debug] [Thread-4 (]: On model.payments.dim_date: COMMIT
+[0m11:13:02.994388 [debug] [Thread-2 (]: SQL status: COMMIT in 0.009 seconds
+[0m11:13:02.995214 [debug] [Thread-1 (]: Using postgres connection "model.payments.fact_transactions"
+[0m11:13:03.000599 [debug] [Thread-1 (]: On model.payments.fact_transactions: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.fact_transactions"} */
+
+      
+  
+    
+
+  create  table "payments"."analytics"."fact_transactions"
+  
+  
+    as
+  
+  (
+    -- Incremental: after the first build, only rows loaded since the last run are processed.
+-- unique_key means a re-processed transaction replaces its old row instead of duplicating.
+
+
+select
+    t.transaction_id,
+    md5(t.customer_id)                            as customer_key,
+    md5(t.merchant_id)                            as merchant_key,
+    to_char(t.transaction_date, 'YYYYMMDD')::int  as date_key,
+    md5(t.channel)                                as channel_key,
+    t.amount,
+    t.fee,
+    t.status,
+    t.created_at,
+    t.loaded_at
+from "payments"."analytics"."stg_transactions" t
+
+
+  );
+  
+  
+[0m11:13:03.000998 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:03.001471 [debug] [Thread-4 (]: SQL status: COMMIT in 0.004 seconds
+[0m11:13:02.999928 [debug] [Thread-2 (]: Applying DROP to: "payments"."analytics"."dim_channel__dbt_backup"
+[0m11:13:03.007569 [debug] [Thread-2 (]: Using postgres connection "model.payments.dim_channel"
+[0m11:13:03.008672 [debug] [Thread-2 (]: On model.payments.dim_channel: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_channel"} */
+drop table if exists "payments"."analytics"."dim_channel__dbt_backup" cascade
+[0m11:13:03.009842 [debug] [Thread-3 (]: Using postgres connection "test.payments.not_null_dim_customer_customer_key.c289fe4d1f"
+[0m11:13:03.005616 [debug] [Thread-4 (]: Applying DROP to: "payments"."analytics"."dim_date__dbt_backup"
+[0m11:13:03.012982 [debug] [Thread-4 (]: Using postgres connection "model.payments.dim_date"
+[0m11:13:03.013392 [debug] [Thread-4 (]: On model.payments.dim_date: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.dim_date"} */
+drop table if exists "payments"."analytics"."dim_date__dbt_backup" cascade
+[0m11:13:03.011255 [debug] [Thread-3 (]: On test.payments.not_null_dim_customer_customer_key.c289fe4d1f: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_dim_customer_customer_key.c289fe4d1f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_key
+from "payments"."analytics"."dim_customer"
+where customer_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.012108 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:13:03.017374 [debug] [Thread-2 (]: On model.payments.dim_channel: Close
+[0m11:13:03.014898 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:13:03.014121 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:03.020390 [debug] [Thread-4 (]: On model.payments.dim_date: Close
+[0m11:13:03.021531 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ACED3C50>]}
+[0m11:13:03.023205 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ACD43350>]}
+[0m11:13:03.024575 [info ] [Thread-2 (]: 15 of 36 OK created sql table model analytics.dim_channel ...................... [[32mSELECT 4[0m in 0.28s]
+[0m11:13:03.028381 [debug] [Thread-2 (]: Finished running node model.payments.dim_channel
+[0m11:13:03.029711 [debug] [Thread-2 (]: Began running node test.payments.unique_dim_customer_customer_key.7b0683cc6e
+[0m11:13:03.026271 [info ] [Thread-4 (]: 16 of 36 OK created sql table model analytics.dim_date ......................... [[32mSELECT 7[0m in 0.27s]
+[0m11:13:03.032758 [debug] [Thread-4 (]: Finished running node model.payments.dim_date
+[0m11:13:03.031024 [info ] [Thread-2 (]: 19 of 36 START test unique_dim_customer_customer_key ........................... [RUN]
+[0m11:13:03.035383 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.payments.dim_channel, now test.payments.unique_dim_customer_customer_key.7b0683cc6e)
+[0m11:13:03.033904 [debug] [Thread-4 (]: Began running node test.payments.not_null_dim_merchant_merchant_key.fac4071f5c
+[0m11:13:03.036170 [debug] [Thread-2 (]: Began compiling node test.payments.unique_dim_customer_customer_key.7b0683cc6e
+[0m11:13:03.037139 [info ] [Thread-4 (]: 20 of 36 START test not_null_dim_merchant_merchant_key ......................... [RUN]
+[0m11:13:03.049944 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.payments.dim_date, now test.payments.not_null_dim_merchant_merchant_key.fac4071f5c)
+[0m11:13:03.048685 [debug] [Thread-2 (]: Writing injected SQL for node "test.payments.unique_dim_customer_customer_key.7b0683cc6e"
+[0m11:13:03.051343 [debug] [Thread-4 (]: Began compiling node test.payments.not_null_dim_merchant_merchant_key.fac4071f5c
+[0m11:13:03.064541 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.not_null_dim_merchant_merchant_key.fac4071f5c"
+[0m11:13:03.066090 [debug] [Thread-1 (]: SQL status: SELECT 3467 in 0.065 seconds
+[0m11:13:03.072186 [debug] [Thread-1 (]: On model.payments.fact_transactions: COMMIT
+[0m11:13:03.074702 [debug] [Thread-1 (]: Using postgres connection "model.payments.fact_transactions"
+[0m11:13:03.077076 [debug] [Thread-1 (]: On model.payments.fact_transactions: COMMIT
+[0m11:13:03.073257 [debug] [Thread-2 (]: Began executing node test.payments.unique_dim_customer_customer_key.7b0683cc6e
+[0m11:13:03.075775 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.062 seconds
+[0m11:13:03.088447 [debug] [Thread-3 (]: On test.payments.not_null_dim_customer_customer_key.c289fe4d1f: ROLLBACK
+[0m11:13:03.090588 [debug] [Thread-4 (]: Began executing node test.payments.not_null_dim_merchant_merchant_key.fac4071f5c
+[0m11:13:03.097526 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.not_null_dim_merchant_merchant_key.fac4071f5c"
+[0m11:13:03.093089 [debug] [Thread-2 (]: Writing runtime sql for node "test.payments.unique_dim_customer_customer_key.7b0683cc6e"
+[0m11:13:03.098359 [debug] [Thread-3 (]: On test.payments.not_null_dim_customer_customer_key.c289fe4d1f: Close
+[0m11:13:03.092286 [debug] [Thread-1 (]: SQL status: COMMIT in 0.014 seconds
+[0m11:13:03.105964 [debug] [Thread-1 (]: On model.payments.fact_transactions: Close
+[0m11:13:03.108185 [debug] [Thread-4 (]: Using postgres connection "test.payments.not_null_dim_merchant_merchant_key.fac4071f5c"
+[0m11:13:03.101249 [info ] [Thread-3 (]: 18 of 36 PASS not_null_dim_customer_customer_key ............................... [[32mPASS[0m in 0.24s]
+[0m11:13:03.110802 [debug] [Thread-4 (]: On test.payments.not_null_dim_merchant_merchant_key.fac4071f5c: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_dim_merchant_merchant_key.fac4071f5c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select merchant_key
+from "payments"."analytics"."dim_merchant"
+where merchant_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.113204 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ACED1430>]}
+[0m11:13:03.115119 [debug] [Thread-3 (]: Finished running node test.payments.not_null_dim_customer_customer_key.c289fe4d1f
+[0m11:13:03.117584 [debug] [Thread-2 (]: Using postgres connection "test.payments.unique_dim_customer_customer_key.7b0683cc6e"
+[0m11:13:03.119687 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:03.123873 [debug] [Thread-3 (]: Began running node test.payments.unique_dim_merchant_merchant_key.4b9d698808
+[0m11:13:03.122972 [info ] [Thread-1 (]: 17 of 36 OK created sql incremental model analytics.fact_transactions .......... [[32mSELECT 3467[0m in 0.27s]
+[0m11:13:03.126591 [debug] [Thread-2 (]: On test.payments.unique_dim_customer_customer_key.7b0683cc6e: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_dim_customer_customer_key.7b0683cc6e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_key as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."dim_customer"
+where customer_key is not null
+group by customer_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.131403 [debug] [Thread-1 (]: Finished running node model.payments.fact_transactions
+[0m11:13:03.128842 [info ] [Thread-3 (]: 21 of 36 START test unique_dim_merchant_merchant_key ........................... [RUN]
+[0m11:13:03.134723 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:03.137946 [debug] [Thread-1 (]: Began running node test.payments.not_null_dim_channel_channel_key.1956d08ce3
+[0m11:13:03.141770 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.payments.not_null_dim_customer_customer_key.c289fe4d1f, now test.payments.unique_dim_merchant_merchant_key.4b9d698808)
+[0m11:13:03.148728 [debug] [Thread-3 (]: Began compiling node test.payments.unique_dim_merchant_merchant_key.4b9d698808
+[0m11:13:03.146446 [info ] [Thread-1 (]: 22 of 36 START test not_null_dim_channel_channel_key ........................... [RUN]
+[0m11:13:03.181104 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.payments.fact_transactions, now test.payments.not_null_dim_channel_channel_key.1956d08ce3)
+[0m11:13:03.178652 [debug] [Thread-3 (]: Writing injected SQL for node "test.payments.unique_dim_merchant_merchant_key.4b9d698808"
+[0m11:13:03.183537 [debug] [Thread-1 (]: Began compiling node test.payments.not_null_dim_channel_channel_key.1956d08ce3
+[0m11:13:03.196140 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.077 seconds
+[0m11:13:03.197541 [debug] [Thread-4 (]: On test.payments.not_null_dim_merchant_merchant_key.fac4071f5c: ROLLBACK
+[0m11:13:03.205740 [debug] [Thread-1 (]: Writing injected SQL for node "test.payments.not_null_dim_channel_channel_key.1956d08ce3"
+[0m11:13:03.206974 [debug] [Thread-4 (]: On test.payments.not_null_dim_merchant_merchant_key.fac4071f5c: Close
+[0m11:13:03.208356 [debug] [Thread-3 (]: Began executing node test.payments.unique_dim_merchant_merchant_key.4b9d698808
+[0m11:13:03.216086 [debug] [Thread-3 (]: Writing runtime sql for node "test.payments.unique_dim_merchant_merchant_key.4b9d698808"
+[0m11:13:03.210621 [info ] [Thread-4 (]: 20 of 36 PASS not_null_dim_merchant_merchant_key ............................... [[32mPASS[0m in 0.16s]
+[0m11:13:03.218542 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.084 seconds
+[0m11:13:03.220312 [debug] [Thread-1 (]: Began executing node test.payments.not_null_dim_channel_channel_key.1956d08ce3
+[0m11:13:03.222818 [debug] [Thread-4 (]: Finished running node test.payments.not_null_dim_merchant_merchant_key.fac4071f5c
+[0m11:13:03.227172 [debug] [Thread-2 (]: On test.payments.unique_dim_customer_customer_key.7b0683cc6e: ROLLBACK
+[0m11:13:03.231342 [debug] [Thread-1 (]: Writing runtime sql for node "test.payments.not_null_dim_channel_channel_key.1956d08ce3"
+[0m11:13:03.233356 [debug] [Thread-4 (]: Began running node test.payments.unique_dim_channel_channel_key.992827e2a4
+[0m11:13:03.235790 [debug] [Thread-3 (]: Using postgres connection "test.payments.unique_dim_merchant_merchant_key.4b9d698808"
+[0m11:13:03.240495 [debug] [Thread-3 (]: On test.payments.unique_dim_merchant_merchant_key.4b9d698808: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_dim_merchant_merchant_key.4b9d698808"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    merchant_key as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."dim_merchant"
+where merchant_key is not null
+group by merchant_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.243933 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:03.238489 [info ] [Thread-4 (]: 23 of 36 START test unique_dim_channel_channel_key ............................. [RUN]
+[0m11:13:03.242335 [debug] [Thread-2 (]: On test.payments.unique_dim_customer_customer_key.7b0683cc6e: Close
+[0m11:13:03.245322 [debug] [Thread-1 (]: Using postgres connection "test.payments.not_null_dim_channel_channel_key.1956d08ce3"
+[0m11:13:03.249077 [debug] [Thread-1 (]: On test.payments.not_null_dim_channel_channel_key.1956d08ce3: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_dim_channel_channel_key.1956d08ce3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select channel_key
+from "payments"."analytics"."dim_channel"
+where channel_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.246661 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.payments.not_null_dim_merchant_merchant_key.fac4071f5c, now test.payments.unique_dim_channel_channel_key.992827e2a4)
+[0m11:13:03.259210 [debug] [Thread-4 (]: Began compiling node test.payments.unique_dim_channel_channel_key.992827e2a4
+[0m11:13:03.252908 [info ] [Thread-2 (]: 19 of 36 PASS unique_dim_customer_customer_key ................................. [[32mPASS[0m in 0.22s]
+[0m11:13:03.255704 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:03.275797 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.unique_dim_channel_channel_key.992827e2a4"
+[0m11:13:03.277035 [debug] [Thread-2 (]: Finished running node test.payments.unique_dim_customer_customer_key.7b0683cc6e
+[0m11:13:03.278488 [debug] [Thread-2 (]: Began running node test.payments.not_null_dim_date_date_key.881d0a31b6
+[0m11:13:03.279397 [info ] [Thread-2 (]: 24 of 36 START test not_null_dim_date_date_key ................................. [RUN]
+[0m11:13:03.281298 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.payments.unique_dim_customer_customer_key.7b0683cc6e, now test.payments.not_null_dim_date_date_key.881d0a31b6)
+[0m11:13:03.284580 [debug] [Thread-2 (]: Began compiling node test.payments.not_null_dim_date_date_key.881d0a31b6
+[0m11:13:03.282832 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.039 seconds
+[0m11:13:03.286382 [debug] [Thread-4 (]: Began executing node test.payments.unique_dim_channel_channel_key.992827e2a4
+[0m11:13:03.298288 [debug] [Thread-2 (]: Writing injected SQL for node "test.payments.not_null_dim_date_date_key.881d0a31b6"
+[0m11:13:03.301067 [debug] [Thread-3 (]: On test.payments.unique_dim_merchant_merchant_key.4b9d698808: ROLLBACK
+[0m11:13:03.304361 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.unique_dim_channel_channel_key.992827e2a4"
+[0m11:13:03.306531 [debug] [Thread-2 (]: Began executing node test.payments.not_null_dim_date_date_key.881d0a31b6
+[0m11:13:03.310208 [debug] [Thread-2 (]: Writing runtime sql for node "test.payments.not_null_dim_date_date_key.881d0a31b6"
+[0m11:13:03.311801 [debug] [Thread-3 (]: On test.payments.unique_dim_merchant_merchant_key.4b9d698808: Close
+[0m11:13:03.312681 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.057 seconds
+[0m11:13:03.310968 [debug] [Thread-4 (]: Using postgres connection "test.payments.unique_dim_channel_channel_key.992827e2a4"
+[0m11:13:03.316630 [debug] [Thread-4 (]: On test.payments.unique_dim_channel_channel_key.992827e2a4: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_dim_channel_channel_key.992827e2a4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    channel_key as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."dim_channel"
+where channel_key is not null
+group by channel_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.315660 [debug] [Thread-1 (]: On test.payments.not_null_dim_channel_channel_key.1956d08ce3: ROLLBACK
+[0m11:13:03.317516 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:03.319276 [debug] [Thread-2 (]: Using postgres connection "test.payments.not_null_dim_date_date_key.881d0a31b6"
+[0m11:13:03.320887 [debug] [Thread-2 (]: On test.payments.not_null_dim_date_date_key.881d0a31b6: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_dim_date_date_key.881d0a31b6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from "payments"."analytics"."dim_date"
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.313863 [info ] [Thread-3 (]: 21 of 36 PASS unique_dim_merchant_merchant_key ................................. [[32mPASS[0m in 0.17s]
+[0m11:13:03.320027 [debug] [Thread-1 (]: On test.payments.not_null_dim_channel_channel_key.1956d08ce3: Close
+[0m11:13:03.321480 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:03.322378 [debug] [Thread-3 (]: Finished running node test.payments.unique_dim_merchant_merchant_key.4b9d698808
+[0m11:13:03.325260 [debug] [Thread-3 (]: Began running node test.payments.unique_dim_date_date_key.0869fd48f9
+[0m11:13:03.324049 [info ] [Thread-1 (]: 22 of 36 PASS not_null_dim_channel_channel_key ................................. [[32mPASS[0m in 0.14s]
+[0m11:13:03.328739 [debug] [Thread-1 (]: Finished running node test.payments.not_null_dim_channel_channel_key.1956d08ce3
+[0m11:13:03.330285 [debug] [Thread-1 (]: Began running node test.payments.assert_fee_not_negative
+[0m11:13:03.326674 [info ] [Thread-3 (]: 25 of 36 START test unique_dim_date_date_key ................................... [RUN]
+[0m11:13:03.332130 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.payments.unique_dim_merchant_merchant_key.4b9d698808, now test.payments.unique_dim_date_date_key.0869fd48f9)
+[0m11:13:03.333628 [debug] [Thread-3 (]: Began compiling node test.payments.unique_dim_date_date_key.0869fd48f9
+[0m11:13:03.331191 [info ] [Thread-1 (]: 26 of 36 START test assert_fee_not_negative .................................... [RUN]
+[0m11:13:03.347016 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.payments.not_null_dim_channel_channel_key.1956d08ce3, now test.payments.assert_fee_not_negative)
+[0m11:13:03.347890 [debug] [Thread-1 (]: Began compiling node test.payments.assert_fee_not_negative
+[0m11:13:03.351316 [debug] [Thread-1 (]: Writing injected SQL for node "test.payments.assert_fee_not_negative"
+[0m11:13:03.346045 [debug] [Thread-3 (]: Writing injected SQL for node "test.payments.unique_dim_date_date_key.0869fd48f9"
+[0m11:13:03.354448 [debug] [Thread-3 (]: Began executing node test.payments.unique_dim_date_date_key.0869fd48f9
+[0m11:13:03.359181 [debug] [Thread-3 (]: Writing runtime sql for node "test.payments.unique_dim_date_date_key.0869fd48f9"
+[0m11:13:03.360256 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.039 seconds
+[0m11:13:03.363978 [debug] [Thread-2 (]: On test.payments.not_null_dim_date_date_key.881d0a31b6: ROLLBACK
+[0m11:13:03.360817 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.043 seconds
+[0m11:13:03.366907 [debug] [Thread-4 (]: On test.payments.unique_dim_channel_channel_key.992827e2a4: ROLLBACK
+[0m11:13:03.368073 [debug] [Thread-1 (]: Began executing node test.payments.assert_fee_not_negative
+[0m11:13:03.374007 [debug] [Thread-1 (]: Writing runtime sql for node "test.payments.assert_fee_not_negative"
+[0m11:13:03.369244 [debug] [Thread-2 (]: On test.payments.not_null_dim_date_date_key.881d0a31b6: Close
+[0m11:13:03.375006 [debug] [Thread-3 (]: Using postgres connection "test.payments.unique_dim_date_date_key.0869fd48f9"
+[0m11:13:03.377241 [debug] [Thread-3 (]: On test.payments.unique_dim_date_date_key.0869fd48f9: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_dim_date_date_key.0869fd48f9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date_key as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."dim_date"
+where date_key is not null
+group by date_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.380034 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:03.379098 [info ] [Thread-2 (]: 24 of 36 PASS not_null_dim_date_date_key ....................................... [[32mPASS[0m in 0.10s]
+[0m11:13:03.375740 [debug] [Thread-4 (]: On test.payments.unique_dim_channel_channel_key.992827e2a4: Close
+[0m11:13:03.382183 [debug] [Thread-2 (]: Finished running node test.payments.not_null_dim_date_date_key.881d0a31b6
+[0m11:13:03.385943 [debug] [Thread-2 (]: Began running node test.payments.not_null_fact_transactions_customer_key.5d744f2fbb
+[0m11:13:03.383835 [debug] [Thread-1 (]: Using postgres connection "test.payments.assert_fee_not_negative"
+[0m11:13:03.393249 [debug] [Thread-1 (]: On test.payments.assert_fee_not_negative: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.assert_fee_not_negative"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- A singular test: dbt fails the test if this query returns any rows.
+select transaction_id, fee
+from "payments"."analytics"."fact_transactions"
+where fee < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.388038 [info ] [Thread-2 (]: 27 of 36 START test not_null_fact_transactions_customer_key .................... [RUN]
+[0m11:13:03.398142 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.payments.not_null_dim_date_date_key.881d0a31b6, now test.payments.not_null_fact_transactions_customer_key.5d744f2fbb)
+[0m11:13:03.390396 [info ] [Thread-4 (]: 23 of 36 PASS unique_dim_channel_channel_key ................................... [[32mPASS[0m in 0.14s]
+[0m11:13:03.395341 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:03.399266 [debug] [Thread-2 (]: Began compiling node test.payments.not_null_fact_transactions_customer_key.5d744f2fbb
+[0m11:13:03.402017 [debug] [Thread-4 (]: Finished running node test.payments.unique_dim_channel_channel_key.992827e2a4
+[0m11:13:03.422978 [debug] [Thread-4 (]: Began running node test.payments.not_null_fact_transactions_merchant_key.7397409db7
+[0m11:13:03.421821 [debug] [Thread-2 (]: Writing injected SQL for node "test.payments.not_null_fact_transactions_customer_key.5d744f2fbb"
+[0m11:13:03.423696 [info ] [Thread-4 (]: 28 of 36 START test not_null_fact_transactions_merchant_key .................... [RUN]
+[0m11:13:03.424660 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.payments.unique_dim_channel_channel_key.992827e2a4, now test.payments.not_null_fact_transactions_merchant_key.7397409db7)
+[0m11:13:03.425107 [debug] [Thread-4 (]: Began compiling node test.payments.not_null_fact_transactions_merchant_key.7397409db7
+[0m11:13:03.437533 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.not_null_fact_transactions_merchant_key.7397409db7"
+[0m11:13:03.438349 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.058 seconds
+[0m11:13:03.440154 [debug] [Thread-3 (]: On test.payments.unique_dim_date_date_key.0869fd48f9: ROLLBACK
+[0m11:13:03.441221 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.046 seconds
+[0m11:13:03.444016 [debug] [Thread-1 (]: On test.payments.assert_fee_not_negative: ROLLBACK
+[0m11:13:03.444782 [debug] [Thread-2 (]: Began executing node test.payments.not_null_fact_transactions_customer_key.5d744f2fbb
+[0m11:13:03.447898 [debug] [Thread-2 (]: Writing runtime sql for node "test.payments.not_null_fact_transactions_customer_key.5d744f2fbb"
+[0m11:13:03.445791 [debug] [Thread-3 (]: On test.payments.unique_dim_date_date_key.0869fd48f9: Close
+[0m11:13:03.448683 [debug] [Thread-1 (]: On test.payments.assert_fee_not_negative: Close
+[0m11:13:03.445422 [debug] [Thread-4 (]: Began executing node test.payments.not_null_fact_transactions_merchant_key.7397409db7
+[0m11:13:03.455811 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.not_null_fact_transactions_merchant_key.7397409db7"
+[0m11:13:03.450290 [info ] [Thread-3 (]: 25 of 36 PASS unique_dim_date_date_key ......................................... [[32mPASS[0m in 0.12s]
+[0m11:13:03.457630 [debug] [Thread-3 (]: Finished running node test.payments.unique_dim_date_date_key.0869fd48f9
+[0m11:13:03.451209 [info ] [Thread-1 (]: 26 of 36 PASS assert_fee_not_negative .......................................... [[32mPASS[0m in 0.10s]
+[0m11:13:03.460701 [debug] [Thread-1 (]: Finished running node test.payments.assert_fee_not_negative
+[0m11:13:03.461289 [debug] [Thread-1 (]: Began running node test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01
+[0m11:13:03.459855 [debug] [Thread-2 (]: Using postgres connection "test.payments.not_null_fact_transactions_customer_key.5d744f2fbb"
+[0m11:13:03.462551 [debug] [Thread-2 (]: On test.payments.not_null_fact_transactions_customer_key.5d744f2fbb: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_fact_transactions_customer_key.5d744f2fbb"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_key
+from "payments"."analytics"."fact_transactions"
+where customer_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.458820 [debug] [Thread-3 (]: Began running node test.payments.not_null_fact_transactions_transaction_id.e79bae8750
+[0m11:13:03.463365 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:03.464560 [info ] [Thread-3 (]: 29 of 36 START test not_null_fact_transactions_transaction_id .................. [RUN]
+[0m11:13:03.466614 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.payments.unique_dim_date_date_key.0869fd48f9, now test.payments.not_null_fact_transactions_transaction_id.e79bae8750)
+[0m11:13:03.469898 [debug] [Thread-3 (]: Began compiling node test.payments.not_null_fact_transactions_transaction_id.e79bae8750
+[0m11:13:03.461864 [info ] [Thread-1 (]: 30 of 36 START test relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_  [RUN]
+[0m11:13:03.468391 [debug] [Thread-4 (]: Using postgres connection "test.payments.not_null_fact_transactions_merchant_key.7397409db7"
+[0m11:13:03.486939 [debug] [Thread-4 (]: On test.payments.not_null_fact_transactions_merchant_key.7397409db7: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_fact_transactions_merchant_key.7397409db7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select merchant_key
+from "payments"."analytics"."fact_transactions"
+where merchant_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.486043 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.payments.assert_fee_not_negative, now test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01)
+[0m11:13:03.485016 [debug] [Thread-3 (]: Writing injected SQL for node "test.payments.not_null_fact_transactions_transaction_id.e79bae8750"
+[0m11:13:03.487955 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:03.488907 [debug] [Thread-1 (]: Began compiling node test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01
+[0m11:13:03.506756 [debug] [Thread-1 (]: Writing injected SQL for node "test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01"
+[0m11:13:03.507782 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.044 seconds
+[0m11:13:03.511148 [debug] [Thread-2 (]: On test.payments.not_null_fact_transactions_customer_key.5d744f2fbb: ROLLBACK
+[0m11:13:03.512954 [debug] [Thread-3 (]: Began executing node test.payments.not_null_fact_transactions_transaction_id.e79bae8750
+[0m11:13:03.512211 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.024 seconds
+[0m11:13:03.517478 [debug] [Thread-3 (]: Writing runtime sql for node "test.payments.not_null_fact_transactions_transaction_id.e79bae8750"
+[0m11:13:03.518615 [debug] [Thread-2 (]: On test.payments.not_null_fact_transactions_customer_key.5d744f2fbb: Close
+[0m11:13:03.519410 [debug] [Thread-1 (]: Began executing node test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01
+[0m11:13:03.525716 [debug] [Thread-1 (]: Writing runtime sql for node "test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01"
+[0m11:13:03.522008 [debug] [Thread-4 (]: On test.payments.not_null_fact_transactions_merchant_key.7397409db7: ROLLBACK
+[0m11:13:03.527411 [info ] [Thread-2 (]: 27 of 36 PASS not_null_fact_transactions_customer_key .......................... [[32mPASS[0m in 0.13s]
+[0m11:13:03.530953 [debug] [Thread-2 (]: Finished running node test.payments.not_null_fact_transactions_customer_key.5d744f2fbb
+[0m11:13:03.532219 [debug] [Thread-4 (]: On test.payments.not_null_fact_transactions_merchant_key.7397409db7: Close
+[0m11:13:03.533325 [debug] [Thread-3 (]: Using postgres connection "test.payments.not_null_fact_transactions_transaction_id.e79bae8750"
+[0m11:13:03.535094 [debug] [Thread-2 (]: Began running node test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6
+[0m11:13:03.536778 [debug] [Thread-1 (]: Using postgres connection "test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01"
+[0m11:13:03.537835 [debug] [Thread-3 (]: On test.payments.not_null_fact_transactions_transaction_id.e79bae8750: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_fact_transactions_transaction_id.e79bae8750"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "payments"."analytics"."fact_transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.538788 [info ] [Thread-4 (]: 28 of 36 PASS not_null_fact_transactions_merchant_key .......................... [[32mPASS[0m in 0.11s]
+[0m11:13:03.540242 [info ] [Thread-2 (]: 31 of 36 START test relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_  [RUN]
+[0m11:13:03.541224 [debug] [Thread-1 (]: On test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select channel_key as from_field
+    from "payments"."analytics"."fact_transactions"
+    where channel_key is not null
+),
+
+parent as (
+    select channel_key as to_field
+    from "payments"."analytics"."dim_channel"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.542885 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:03.544107 [debug] [Thread-4 (]: Finished running node test.payments.not_null_fact_transactions_merchant_key.7397409db7
+[0m11:13:03.545029 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.payments.not_null_fact_transactions_customer_key.5d744f2fbb, now test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6)
+[0m11:13:03.545815 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:03.547122 [debug] [Thread-4 (]: Began running node test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a
+[0m11:13:03.548048 [debug] [Thread-2 (]: Began compiling node test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6
+[0m11:13:03.550110 [info ] [Thread-4 (]: 32 of 36 START test relationships_fact_transactions_date_key__date_key__ref_dim_date_  [RUN]
+[0m11:13:03.567718 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.payments.not_null_fact_transactions_merchant_key.7397409db7, now test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a)
+[0m11:13:03.583330 [debug] [Thread-4 (]: Began compiling node test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a
+[0m11:13:03.587469 [debug] [Thread-2 (]: Writing injected SQL for node "test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6"
+[0m11:13:03.608383 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a"
+[0m11:13:03.609282 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.063 seconds
+[0m11:13:03.611316 [debug] [Thread-1 (]: On test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01: ROLLBACK
+[0m11:13:03.613099 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.070 seconds
+[0m11:13:03.616385 [debug] [Thread-3 (]: On test.payments.not_null_fact_transactions_transaction_id.e79bae8750: ROLLBACK
+[0m11:13:03.617749 [debug] [Thread-1 (]: On test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01: Close
+[0m11:13:03.619923 [debug] [Thread-2 (]: Began executing node test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6
+[0m11:13:03.624934 [debug] [Thread-2 (]: Writing runtime sql for node "test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6"
+[0m11:13:03.625840 [debug] [Thread-4 (]: Began executing node test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a
+[0m11:13:03.620846 [debug] [Thread-3 (]: On test.payments.not_null_fact_transactions_transaction_id.e79bae8750: Close
+[0m11:13:03.630848 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a"
+[0m11:13:03.627188 [info ] [Thread-1 (]: 30 of 36 PASS relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_  [[32mPASS[0m in 0.14s]
+[0m11:13:03.636372 [debug] [Thread-1 (]: Finished running node test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01
+[0m11:13:03.633265 [info ] [Thread-3 (]: 29 of 36 PASS not_null_fact_transactions_transaction_id ........................ [[32mPASS[0m in 0.17s]
+[0m11:13:03.638954 [debug] [Thread-1 (]: Began running node test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332
+[0m11:13:03.641866 [debug] [Thread-2 (]: Using postgres connection "test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6"
+[0m11:13:03.644389 [debug] [Thread-3 (]: Finished running node test.payments.not_null_fact_transactions_transaction_id.e79bae8750
+[0m11:13:03.645952 [debug] [Thread-4 (]: Using postgres connection "test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a"
+[0m11:13:03.647919 [debug] [Thread-2 (]: On test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_key as from_field
+    from "payments"."analytics"."fact_transactions"
+    where customer_key is not null
+),
+
+parent as (
+    select customer_key as to_field
+    from "payments"."analytics"."dim_customer"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.647005 [info ] [Thread-1 (]: 33 of 36 START test relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_  [RUN]
+[0m11:13:03.649204 [debug] [Thread-3 (]: Began running node test.payments.unique_fact_transactions_transaction_id.4978e2a484
+[0m11:13:03.650259 [debug] [Thread-4 (]: On test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select date_key as from_field
+    from "payments"."analytics"."fact_transactions"
+    where date_key is not null
+),
+
+parent as (
+    select date_key as to_field
+    from "payments"."analytics"."dim_date"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.651181 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:03.653285 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.payments.relationships_fact_transactions_channel_key__channel_key__ref_dim_channel_.f26f2e0e01, now test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332)
+[0m11:13:03.656201 [debug] [Thread-1 (]: Began compiling node test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332
+[0m11:13:03.654660 [info ] [Thread-3 (]: 34 of 36 START test unique_fact_transactions_transaction_id .................... [RUN]
+[0m11:13:03.655193 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:03.673233 [debug] [Thread-1 (]: Writing injected SQL for node "test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332"
+[0m11:13:03.674285 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.payments.not_null_fact_transactions_transaction_id.e79bae8750, now test.payments.unique_fact_transactions_transaction_id.4978e2a484)
+[0m11:13:03.676205 [debug] [Thread-3 (]: Began compiling node test.payments.unique_fact_transactions_transaction_id.4978e2a484
+[0m11:13:03.689383 [debug] [Thread-3 (]: Writing injected SQL for node "test.payments.unique_fact_transactions_transaction_id.4978e2a484"
+[0m11:13:03.691175 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.040 seconds
+[0m11:13:03.694147 [debug] [Thread-2 (]: On test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6: ROLLBACK
+[0m11:13:03.695785 [debug] [Thread-3 (]: Began executing node test.payments.unique_fact_transactions_transaction_id.4978e2a484
+[0m11:13:03.697447 [debug] [Thread-1 (]: Began executing node test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332
+[0m11:13:03.698950 [debug] [Thread-2 (]: On test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6: Close
+[0m11:13:03.703068 [debug] [Thread-3 (]: Writing runtime sql for node "test.payments.unique_fact_transactions_transaction_id.4978e2a484"
+[0m11:13:03.705741 [debug] [Thread-1 (]: Writing runtime sql for node "test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332"
+[0m11:13:03.707657 [info ] [Thread-2 (]: 31 of 36 PASS relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_  [[32mPASS[0m in 0.16s]
+[0m11:13:03.709948 [debug] [Thread-2 (]: Finished running node test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6
+[0m11:13:03.712022 [debug] [Thread-3 (]: Using postgres connection "test.payments.unique_fact_transactions_transaction_id.4978e2a484"
+[0m11:13:03.713292 [debug] [Thread-3 (]: On test.payments.unique_fact_transactions_transaction_id.4978e2a484: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.unique_fact_transactions_transaction_id.4978e2a484"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "payments"."analytics"."fact_transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.713811 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:13:03.714991 [debug] [Thread-1 (]: Using postgres connection "test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332"
+[0m11:13:03.716143 [debug] [Thread-1 (]: On test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select merchant_key as from_field
+    from "payments"."analytics"."fact_transactions"
+    where merchant_key is not null
+),
+
+parent as (
+    select merchant_key as to_field
+    from "payments"."analytics"."dim_merchant"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.717461 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:13:03.718788 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.063 seconds
+[0m11:13:03.720818 [debug] [Thread-4 (]: On test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a: ROLLBACK
+[0m11:13:03.722329 [debug] [Thread-4 (]: On test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a: Close
+[0m11:13:03.723309 [info ] [Thread-4 (]: 32 of 36 PASS relationships_fact_transactions_date_key__date_key__ref_dim_date_  [[32mPASS[0m in 0.16s]
+[0m11:13:03.724862 [debug] [Thread-4 (]: Finished running node test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a
+[0m11:13:03.737113 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.020 seconds
+[0m11:13:03.738538 [debug] [Thread-1 (]: On test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332: ROLLBACK
+[0m11:13:03.739555 [debug] [Thread-1 (]: On test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332: Close
+[0m11:13:03.740608 [info ] [Thread-1 (]: 33 of 36 PASS relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_  [[32mPASS[0m in 0.09s]
+[0m11:13:03.742096 [debug] [Thread-1 (]: Finished running node test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332
+[0m11:13:03.743133 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.029 seconds
+[0m11:13:03.744551 [debug] [Thread-3 (]: On test.payments.unique_fact_transactions_transaction_id.4978e2a484: ROLLBACK
+[0m11:13:03.745437 [debug] [Thread-3 (]: On test.payments.unique_fact_transactions_transaction_id.4978e2a484: Close
+[0m11:13:03.746263 [info ] [Thread-3 (]: 34 of 36 PASS unique_fact_transactions_transaction_id .......................... [[32mPASS[0m in 0.07s]
+[0m11:13:03.747580 [debug] [Thread-3 (]: Finished running node test.payments.unique_fact_transactions_transaction_id.4978e2a484
+[0m11:13:03.748557 [debug] [Thread-2 (]: Began running node model.payments.mart_daily_channel_metrics
+[0m11:13:03.749034 [info ] [Thread-2 (]: 35 of 36 START sql table model analytics.mart_daily_channel_metrics ............ [RUN]
+[0m11:13:03.750106 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.payments.relationships_fact_transactions_customer_key__customer_key__ref_dim_customer_.70986017c6, now model.payments.mart_daily_channel_metrics)
+[0m11:13:03.750887 [debug] [Thread-2 (]: Began compiling node model.payments.mart_daily_channel_metrics
+[0m11:13:03.753599 [debug] [Thread-2 (]: Writing injected SQL for node "model.payments.mart_daily_channel_metrics"
+[0m11:13:03.754716 [debug] [Thread-2 (]: Began executing node model.payments.mart_daily_channel_metrics
+[0m11:13:03.757534 [debug] [Thread-2 (]: Writing runtime sql for node "model.payments.mart_daily_channel_metrics"
+[0m11:13:03.758761 [debug] [Thread-2 (]: Using postgres connection "model.payments.mart_daily_channel_metrics"
+[0m11:13:03.759219 [debug] [Thread-2 (]: On model.payments.mart_daily_channel_metrics: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.mart_daily_channel_metrics"} */
+
+  
+    
+
+  create  table "payments"."analytics"."mart_daily_channel_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- The table the dashboard reads: one row per day per channel.
+select
+    d.full_date,
+    c.channel_name,
+    count(*)                                                    as transactions,
+    count(*) filter (where f.status = 'success')                as successful,
+    round(100.0 * count(*) filter (where f.status = 'success') / count(*), 1) as success_rate_pct,
+    sum(f.amount) filter (where f.status = 'success')           as successful_amount,
+    sum(f.fee)    filter (where f.status = 'success')           as fee_revenue,
+    coalesce(sum(f.amount) filter (where f.status = 'pending'), 0) as pending_amount
+from "payments"."analytics"."fact_transactions" f
+join "payments"."analytics"."dim_date"    d on d.date_key    = f.date_key
+join "payments"."analytics"."dim_channel" c on c.channel_key = f.channel_key
+group by 1, 2
+  );
+  
+[0m11:13:03.759580 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:13:03.785461 [debug] [Thread-2 (]: SQL status: SELECT 28 in 0.026 seconds
+[0m11:13:03.788078 [debug] [Thread-2 (]: Using postgres connection "model.payments.mart_daily_channel_metrics"
+[0m11:13:03.788484 [debug] [Thread-2 (]: On model.payments.mart_daily_channel_metrics: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.mart_daily_channel_metrics"} */
+alter table "payments"."analytics"."mart_daily_channel_metrics__dbt_tmp" rename to "mart_daily_channel_metrics"
+[0m11:13:03.789610 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:13:03.791039 [debug] [Thread-2 (]: On model.payments.mart_daily_channel_metrics: COMMIT
+[0m11:13:03.791411 [debug] [Thread-2 (]: Using postgres connection "model.payments.mart_daily_channel_metrics"
+[0m11:13:03.791911 [debug] [Thread-2 (]: On model.payments.mart_daily_channel_metrics: COMMIT
+[0m11:13:03.793770 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m11:13:03.795175 [debug] [Thread-2 (]: Applying DROP to: "payments"."analytics"."mart_daily_channel_metrics__dbt_backup"
+[0m11:13:03.796050 [debug] [Thread-2 (]: Using postgres connection "model.payments.mart_daily_channel_metrics"
+[0m11:13:03.796475 [debug] [Thread-2 (]: On model.payments.mart_daily_channel_metrics: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "model.payments.mart_daily_channel_metrics"} */
+drop table if exists "payments"."analytics"."mart_daily_channel_metrics__dbt_backup" cascade
+[0m11:13:03.797460 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:13:03.798763 [debug] [Thread-2 (]: On model.payments.mart_daily_channel_metrics: Close
+[0m11:13:03.799985 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '031dac32-8baa-4eb7-aa9f-0f4ccef46144', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AC32BEF0>]}
+[0m11:13:03.800972 [info ] [Thread-2 (]: 35 of 36 OK created sql table model analytics.mart_daily_channel_metrics ....... [[32mSELECT 28[0m in 0.05s]
+[0m11:13:03.801786 [debug] [Thread-2 (]: Finished running node model.payments.mart_daily_channel_metrics
+[0m11:13:03.802486 [debug] [Thread-4 (]: Began running node test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169
+[0m11:13:03.802879 [info ] [Thread-4 (]: 36 of 36 START test not_null_mart_daily_channel_metrics_success_rate_pct ....... [RUN]
+[0m11:13:03.803620 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.payments.relationships_fact_transactions_date_key__date_key__ref_dim_date_.3f1a129c4a, now test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169)
+[0m11:13:03.803993 [debug] [Thread-4 (]: Began compiling node test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169
+[0m11:13:03.809501 [debug] [Thread-4 (]: Writing injected SQL for node "test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169"
+[0m11:13:03.810737 [debug] [Thread-4 (]: Began executing node test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169
+[0m11:13:03.812878 [debug] [Thread-4 (]: Writing runtime sql for node "test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169"
+[0m11:13:03.813910 [debug] [Thread-4 (]: Using postgres connection "test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169"
+[0m11:13:03.814364 [debug] [Thread-4 (]: On test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169: /* {"app": "dbt", "dbt_version": "1.13.0rc1", "profile_name": "payments", "target_name": "dev", "node_id": "test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select success_rate_pct
+from "payments"."analytics"."mart_daily_channel_metrics"
+where success_rate_pct is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:13:03.814708 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:13:03.829083 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m11:13:03.830780 [debug] [Thread-4 (]: On test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169: ROLLBACK
+[0m11:13:03.831849 [debug] [Thread-4 (]: On test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169: Close
+[0m11:13:03.833222 [info ] [Thread-4 (]: 36 of 36 PASS not_null_mart_daily_channel_metrics_success_rate_pct ............. [[32mPASS[0m in 0.03s]
+[0m11:13:03.834187 [debug] [Thread-4 (]: Finished running node test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169
+[0m11:13:03.836445 [debug] [MainThread]: On master: COMMIT
+[0m11:13:03.837062 [debug] [MainThread]: Using postgres connection "master"
+[0m11:13:03.837649 [debug] [MainThread]: On master: COMMIT
+[0m11:13:03.838023 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:13:03.875961 [debug] [MainThread]: SQL status: COMMIT in 0.038 seconds
+[0m11:13:03.876635 [debug] [MainThread]: On master: Close
+[0m11:13:03.877496 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:13:03.878423 [debug] [MainThread]: Connection 'create_payments_analytics' was properly closed.
+[0m11:13:03.878871 [debug] [MainThread]: Connection 'list_payments_analytics' was properly closed.
+[0m11:13:03.879266 [debug] [MainThread]: Connection 'test.payments.unique_fact_transactions_transaction_id.4978e2a484' was properly closed.
+[0m11:13:03.879627 [debug] [MainThread]: Connection 'model.payments.mart_daily_channel_metrics' was properly closed.
+[0m11:13:03.880444 [debug] [MainThread]: Connection 'test.payments.relationships_fact_transactions_merchant_key__merchant_key__ref_dim_merchant_.ff180a9332' was properly closed.
+[0m11:13:03.880923 [debug] [MainThread]: Connection 'test.payments.not_null_mart_daily_channel_metrics_success_rate_pct.3035343169' was properly closed.
+[0m11:13:03.881559 [info ] [MainThread]: 
+[0m11:13:03.882329 [info ] [MainThread]: Finished running 1 incremental model, 5 table models, 27 data tests, 3 view models in 0 hours 0 minutes and 2.26 seconds (2.26s).
+[0m11:13:03.890021 [debug] [MainThread]: Command end result
+[0m11:13:03.937142 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\One\Desktop\payments-pipeline\dbt\target\manifest.json
+[0m11:13:03.939566 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\One\Desktop\payments-pipeline\dbt\target\semantic_manifest.json
+[0m11:13:03.941797 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\One\Desktop\payments-pipeline\dbt\target\osi_document.json
+[0m11:13:03.951223 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\One\Desktop\payments-pipeline\dbt\target\run_results.json
+[0m11:13:03.951697 [info ] [MainThread]: 
+[0m11:13:03.952200 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:13:03.952951 [info ] [MainThread]: 
+[0m11:13:03.953410 [info ] [MainThread]: Done. PASS=36 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=36
+[0m11:13:03.954314 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 6 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:13:03.955314 [debug] [MainThread]: Command `dbt build` succeeded at 11:13:03.955193 after 9.82 seconds
+[0m11:13:03.955678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3ABEE1A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AE6DC0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3AEB9DD90>]}
+[0m11:13:03.956042 [debug] [MainThread]: Flushing usage events
+[0m11:13:05.007583 [debug] [MainThread]: An error was encountered while trying to flush usage events

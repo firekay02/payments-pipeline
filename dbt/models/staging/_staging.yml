@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: One row per transaction, cleaned.
+    columns:
+      - name: transaction_id
+        tests: [unique, not_null]
+      - name: amount
+        tests: [not_null]
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['success', 'failed', 'pending']
+      - name: channel
+        tests:
+          - accepted_values:
+              values: ['MTN', 'Telecel', 'AirtelTigo', 'card']
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+  - name: stg_merchants
+    columns:
+      - name: merchant_id
+        tests: [unique, not_null]

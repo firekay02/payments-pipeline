@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: fact_transactions
+    description: One row per payment attempt (the grain of the star schema).
+    columns:
+      - name: transaction_id
+        tests: [unique, not_null]
+      - name: customer_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_key
+      - name: merchant_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_merchant')
+              field: merchant_key
+      - name: date_key
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+      - name: channel_key
+        tests:
+          - relationships:
+              to: ref('dim_channel')
+              field: channel_key
+  - name: dim_customer
+    columns:
+      - name: customer_key
+        tests: [unique, not_null]
+  - name: dim_merchant
+    columns:
+      - name: merchant_key
+        tests: [unique, not_null]
+  - name: dim_channel
+    columns:
+      - name: channel_key
+        tests: [unique, not_null]
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests: [unique, not_null]
+  - name: mart_daily_channel_metrics
+    columns:
+      - name: success_rate_pct
+        tests: [not_null]
