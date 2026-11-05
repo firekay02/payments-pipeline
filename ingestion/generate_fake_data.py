@@ -38,7 +38,7 @@ def make_transactions(day, n, customers, merchants):
     for _ in range(n):
         amount = round(random.uniform(1, 500), 2)
         rows.append({
-            "transaction_id": str(uuid.uuid4()),
+            "transaction_id": str(uuid.UUID(int=random.getrandbits(128))),
             "customer_id": random.choice(customers)["customer_id"],
             "merchant_id": random.choice(merchants)["merchant_id"],
             "channel": random.choice(CHANNELS),
