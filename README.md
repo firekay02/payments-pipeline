@@ -24,6 +24,9 @@ tests their quality, and serves business metrics on a dashboard.
 ## Dashboard
 ![Dashboard](docs/dashboard.png)
 
+## Airflow DAG
+![Airflow DAG](docs/airflow.png)
+
 ## Quick start (Windows PowerShell)
 ```powershell
 # 1. Start Postgres
