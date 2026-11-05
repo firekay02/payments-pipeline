@@ -63,4 +63,11 @@ python ingestion/load_to_postgres.py
 - [ ] v6 Dashboard + alerts
 
 ## What I would improve next
-*(Fill in at the end.)*
+## What I would improve next
+- **Cloud storage:** land raw files in S3 (partitioned by date) before loading, so the raw data is kept and can be replayed.
+- **Late and changed data:** handle transactions whose status changes later (pending → success) with an upsert on `transaction_id` instead of `DO NOTHING`.
+- **Customer history:** track region changes in `dim_customer` as a slowly changing dimension (SCD type 2) using dbt snapshots.
+- **Alerts:** send a Slack or email message when an Airflow task or a dbt test fails.
+- **More data checks:** row-count checks per day, alerts on sudden drops in success rate, and dbt source freshness checks.
+- **Scale:** move the warehouse to BigQuery or Snowflake and process larger volumes with Spark.
+- **Real-time:** stream payment events through Kafka to flag possible fraud as it happens.
