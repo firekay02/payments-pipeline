@@ -19,7 +19,10 @@ tests their quality, and serves business metrics on a dashboard.
 | Warehouse | PostgreSQL (Docker) | ✅ v2 |
 | Transformations & tests | dbt | ✅ v4 |
 | Orchestration | Airflow | ⬜ v5 |
-| Dashboard | Metabase | ⬜ v6 |
+| Dashboard | Metabase | ✅ v6 |
+
+## Dashboard
+![Dashboard](docs/dashboard.png)
 
 ## Quick start (Windows PowerShell)
 ```powershell
